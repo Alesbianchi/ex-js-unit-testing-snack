@@ -26,6 +26,7 @@ function average(numeri) {
     return totale / numeri.length;
 }
 
+
 module.exports = {
     getInitials,
     createSlug,
