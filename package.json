@@ -1,0 +1,27 @@
+{
+  "name": "ex-js-unit-testing-snack",
+  "version": "1.0.0",
+  "description": "test con jest",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watchALL"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alesbianchi/ex-js-unit-testing-snack.git"
+  },
+  "keywords": [
+    "jest",
+    "javascript"
+  ],
+  "author": "alessandro bianchi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alesbianchi/ex-js-unit-testing-snack/issues"
+  },
+  "homepage": "https://github.com/Alesbianchi/ex-js-unit-testing-snack#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
