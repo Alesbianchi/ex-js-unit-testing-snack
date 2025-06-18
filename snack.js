@@ -33,9 +33,25 @@ function isPalindrome(testo) {
     return normalizzato === invertito;
 }
 
+// snack 07 (lo chiamiamo così per ordine)
+function findPostById(posts, id) {
+
+    if (typeof id !== "number") {
+        throw new Error("L'id deve essere un numero");
+    }
+    for (const post of posts) {
+        if (!("id" in post) || !("title" in post) || !("slug" in post)) {
+            throw new Error("Ogni post deve avere id, title e slug");
+        }
+    }
+
+    return posts.find(post => post.id === id);
+}
+
 module.exports = {
     getInitials,
     createSlug,
     average,
-    isPalindrome
+    isPalindrome,
+    findPostById
 };
