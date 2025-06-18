@@ -17,7 +17,17 @@ function createSlug(testo) {
     return testo.toLowerCase().replaceAll(" ", "-");
 }
 
+// snack 03
+function average(numeri) {
+    if (numeri.length === 0) {
+        return NaN;
+    }
+    const totale = numeri.reduce((acc, num) => acc + num, 0);
+    return totale / numeri.length;
+}
+
 module.exports = {
     getInitials,
-    createSlug
+    createSlug,
+    average
 };
