@@ -1,8 +1,23 @@
-function getInitials(fullName) {
-    return fullName
-        .split(' ')
-        .map(word => word[0].toUpperCase())
-        .join('');
+// snack 01
+function getInitials(nomeCompleto) {
+    // suddivide il nome completo in un array di parole
+    const parole = nomeCompleto.split(" ");
+    // estrae la prima lettera di ogni parola, convertita in maiuscolo
+    const lettere = parole.map(parola => parola.charAt(0).toUpperCase());
+    // unisce tutte le lettere ottenute
+    return lettere.join("");
 }
 
-module.exports = { getInitials };
+// snack 02
+function createSlug(testo) {
+    if (!testo) {
+        throw new Error("Il campo non può essere vuoto");
+    }
+    // converte il testo in minuscolo e sostituisce gli spazi con trattini
+    return testo.toLowerCase().replaceAll(" ", "-");
+}
+
+module.exports = {
+    getInitials,
+    createSlug
+};

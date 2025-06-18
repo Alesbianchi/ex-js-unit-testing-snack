@@ -1,7 +1,13 @@
-const { getInitials } = require('./snack');
+const { getInitials, createSlug } = require('./snack.js');
 
-test('La funzione getInitials restituisce le iniziali di un nome completo', () => {
-    expect(getInitials('Mario Rossi')).toBe('MR');
-    expect(getInitials('Luca Bianchi')).toBe('LB');
-    expect(getInitials('giulia verdi')).toBe('GV'); // anche se in minuscolo
+// snack 01
+test("La funzione getInitials restituisce correttamente le iniziali di una stringa con nome e cognome", () => {
+    const input = "Lorenzo rossi";
+    expect(getInitials(input)).toBe("LDL");
+});
+
+// snack 02
+test("La funzione createSlug restituisce una stringa minuscola con i trattini al posto degli spazi", () => {
+    const frase = "Ciao Come Va";
+    expect(createSlug(frase)).toBe("ciao-come-va");
 });
