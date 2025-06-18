@@ -26,9 +26,16 @@ function average(numeri) {
     return totale / numeri.length;
 }
 
+// snack 05
+function isPalindrome(testo) {
+    const normalizzato = testo.replaceAll(" ", "").toLowerCase();
+    const invertito = normalizzato.split("").reverse().join("");
+    return normalizzato === invertito;
+}
 
 module.exports = {
     getInitials,
     createSlug,
-    average
+    average,
+    isPalindrome
 };
